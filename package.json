@@ -1,0 +1,41 @@
+{
+  "name": "onclick-li-sample",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Ryan Libed",
+  "homepage": "https://github.com/rslibed/onclick-li-sample",
+  "license": "SEE LICENSE IN license.txt",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rslibed/onclick-li-sample"
+  },
+  "keywords": [
+    "Esri",
+    "esrijs",
+    "ArcGIS",
+    "gis",
+    "JavaScript",
+    "TypeScript"
+  ],
+  "devDependencies": {
+    "@types/arcgis-js-api": "^4.19.0",
+    "autoprefixer": "^6.3.6",
+    "dojo-typings": "^1.11.11",
+    "node-sass": "^6.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-normalize-charset": "^1.1.0",
+    "tslint": "^5.16.0",
+    "typescript": "^4.2.4"
+  },
+  "scripts": {
+    "start": "npm-run-all --parallel build:ts watch:ts build:sass watch:sass",
+    "build:ts": "tsc",
+    "watch:ts": "tsc -w",
+    "build:sass": "node-sass src/styles/main.scss src/styles/main.css",
+    "watch:sass": "node-sass --watch src/styles/main.scss src/styles/main.css"
+  },
+  "dependencies": {
+    "@esri/application-base-js": "0.0.31"
+  }
+}
